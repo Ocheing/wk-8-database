@@ -40,27 +40,27 @@ Server: Uvicorn
 
 ## 🚀 Setup Instructions
 Prerequisites
-Python 3.7 or higher
+- Python 3.7 or higher
 
-MySQL Server
+- MySQL Server
 
-pip (Python package installer)
+- pip (Python package installer)
 
 Installation Steps
-Clone the Repository
+1. Clone the Repository
 
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/task-manager-api.git
-cd task-manager-api
-Create a Virtual Environment
+- git clone https://github.com/Ocheing/wk-8-database.git
+- cd task-manager-api
+2. Create a Virtual Environment
 
 bash
 Copy
 Edit
 python -m venv venv
-Activate the Virtual Environment
+3. Activate the Virtual Environment
 
 On Windows:
 
@@ -74,29 +74,29 @@ bash
 Copy
 Edit
 source venv/bin/activate
-Install Dependencies
+4. Install Dependencies
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Configure the Database
+5. Configure the Database
 
-Ensure MySQL server is running.
+- Ensure MySQL server is running.
 
-Create a new database:
+- Create a new database:
 
 sql
 Copy
 Edit
 CREATE DATABASE task_manager_db;
-Update the database.py file with your MySQL credentials:
+- Update the database.py file with your MySQL credentials:
 
 python
 Copy
 Edit
 SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://username:password@localhost/task_manager_db"
-Run the Application
+6. Run the Application
 
 bash
 Copy
@@ -106,30 +106,30 @@ The API will be accessible at http://127.0.0.1:8000.
 
 ## 📚 API Endpoints
 User Endpoints
-POST /users/ : Create a new user.
+- POST /users/ : Create a new user.
 
-GET /users/ : Retrieve all users.
+- GET /users/ : Retrieve all users.
 
-PUT /users/{user_id} : Update a user's information.
+- PUT /users/{user_id} : Update a user's information.
 
-DELETE /users/{user_id} : Delete a user.
+- DELETE /users/{user_id} : Delete a user.
 
 Task Endpoints
-POST /tasks/ : Create a new task.
+- POST /tasks/ : Create a new task.
 
-GET /tasks/ : Retrieve all tasks.
+- GET /tasks/ : Retrieve all tasks.
 
-PUT /tasks/{task_id} : Update a task's details.
+- PUT /tasks/{task_id} : Update a task's details.
 
-DELETE /tasks/{task_id} : Delete a task.
+- DELETE /tasks/{task_id} : Delete a task.
 
 ## 🧪 Testing the API
 ##Using Swagger UI
-FastAPI provides an interactive documentation interface:
+ FastAPI provides an interactive documentation interface:
 
-Navigate to http://127.0.0.1:8000/docs in your browser.
+ 1. Navigate to http://127.0.0.1:8000/docs in your browser.
 
-Explore and test each endpoint directly from the interface.
+ 2. Explore and test each endpoint directly from the interface.
 
 
 
@@ -144,15 +144,15 @@ task-manager-api/
 ├── database.py
 ├── requirements.txt
 └── README.md
-main.py : Contains the FastAPI application and route definitions.
+- main.py : Contains the FastAPI application and route definitions.
 
-models.py : Defines the SQLAlchemy models for Users and Tasks.
+- models.py : Defines the SQLAlchemy models for Users and Tasks.
 
-schemas.py : Contains Pydantic schemas for data validation.
+- schemas.py : Contains Pydantic schemas for data validation.
 
-database.py : Handles the database connection and session management.
+- database.py : Handles the database connection and session management.
 
-requirements.txt : Lists all Python dependencies.
+- requirements.txt : Lists all Python dependencies.
 
-README.md : Project documentation.
+- README.md : Project documentation.
 
