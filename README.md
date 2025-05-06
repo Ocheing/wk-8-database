@@ -1,4 +1,91 @@
 # wk-8-database
+#QUESTION ONE ASSIGNMENT
+# 📦 Inventory Tracking System
+## 📝 Overview
+This project is a MySQL-based Inventory Tracking System designed to manage and monitor inventory levels across various categories, locations, and suppliers. It facilitates efficient tracking of products, their movements, and associated personnel.
+
+## 🎯 Objectives
+- Design a well-structured relational database using MySQL.
+
+- Implement tables with appropriate constraints: PRIMARY KEY, FOREIGN KEY, NOT NULL, and UNIQUE.
+
+- Establish relationships:
+
+1. One-to-One (1:1)
+
+2. One-to-Many (1:M)
+
+3.Many-to-Many (M:N)
+
+- Populate tables with sample data to demonstrate functionality.
+
+## 🗄️ Database Schema
+The database comprises the following tables:
+
+- category: Stores product categories.
+
+- employee: Contains employee details responsible for inventory transactions.
+
+- inventory_transaction: Logs all inventory movements (IN/OUT).
+
+- location: Details of storage locations.
+
+- product: Information about products in inventory.
+
+- product_supplier: Associates products with their suppliers (M:N relationship).
+
+- supplier: Supplier contact information.
+
+## 🔑 Table Relationships
+- Each product belongs to one category and is stored in one location.
+
+- Each inventory_transaction is linked to one product and may involve one employee.
+
+- The product_supplier table establishes a many-to-many relationship between products and suppliers.
+
+## 📂 Sample Data
+The database is pre-populated with sample entries, including:
+
+- Categories: Electronics, Groceries, Office Supplies
+
+- Employees: Alice Mwangi, John Otieno
+
+- Locations: Main Warehouse, Outlet Store
+
+- Products: Laptop HP EliteBook, A4 Printing Paper, Sugar 1kg
+
+- Suppliers: TechWorld Ltd, Stationery Hub
+
+- Inventory Transactions: Initial stock entries and sales
+
+## 📄 Deliverables
+inventory_db.sql: Contains all CREATE TABLE statements and INSERT statements for sample data.
+
+## 🛠️ Getting Started
+- Import the SQL File:
+
+- Use MySQL Workbench or the MySQL command-line tool to import inventory_db.sql into your MySQL server.
+
+- Verify the Data:
+
+- Run queries to ensure all tables are created and populated correctly.
+
+## 🧾 Notes
+Ensure MySQL Server version 8.0 or higher is installed.
+
+Modify the inventory_db.sql file as needed to fit specific requirements or to add more data.
+  
+## 🔧 Suggested Enhancements
+User Authentication: Implement user roles and permissions for enhanced security.
+
+Inventory Alerts: Set up triggers or scheduled events to notify when stock levels are low.
+
+Reporting Module: Generate reports on inventory movements, stock levels, and supplier performance.
+
+Integration with Frontend: Develop a user interface for easier interaction with the database.
+
+
+
 # QUESTION 2
 ## 📝 Task Manager CRUD API
 A simple and efficient Task Manager API built with FastAPI, SQLAlchemy, and MySQL. This application supports full CRUD (Create, Read, Update, Delete) operations for managing users and their associated tasks.
